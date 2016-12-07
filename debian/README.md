@@ -25,8 +25,14 @@ cd FrameworkBenchmarks/frameworks/Java/netty
 java -server -XX:+UseNUMA -XX:+UseParallelGC -XX:+AggressiveOpts -jar target/netty-example-0.1-jar-with-dependencies.jar
 ```
 ## Container
+### Bridge Networking
 ```
 docker run -it --rm -p 8080:8080 techempower-netty
+```
+
+### Host Networking
+```
+docker run -it --rm --network host techempower-netty
 ```
 
 ## Client
